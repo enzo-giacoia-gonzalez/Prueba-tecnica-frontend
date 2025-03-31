@@ -5,19 +5,19 @@ import { RegisterProps } from '../interfaces/registerProps';
 
 export const useRegister = () => {
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
+    const [error, setError] = useState<string>("");
     const [data, setData] = useState<RegisterResponse | null>(null);
 
     const register = async (data: RegisterProps) => {
         setLoading(true);
-        setError(null);
+        setError("");
         setData(null);
 
         try {
             const response = await registerService(data);
             setData(response);
         } catch (err) {
-            setError(new Error(error?.message || "Error al registrarse"));
+            setError((err as Error).message || "Error al obtener los usuarios");
         } finally {
             setLoading(false);
         }
