@@ -1,7 +1,7 @@
 
 
 export const deleteUserService = async (userId: string): Promise<void | Error> => {
-    const response = await fetch(`http://localhost:4000/users/${userId}`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/users/${userId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

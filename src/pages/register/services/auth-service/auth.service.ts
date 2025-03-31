@@ -1,8 +1,9 @@
 import { RegisterResponse } from '../../../../models/auth-model/register.model';
 import { RegisterProps } from '../../interfaces/registerProps';
 
+
 export const registerService = async (data: RegisterProps): Promise<RegisterResponse> => {
-    const response = await fetch("http://localhost:4000/users/register", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/users/register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

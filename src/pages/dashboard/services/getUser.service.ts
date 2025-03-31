@@ -2,7 +2,7 @@ import { User } from '../models/user.model';
 
 
 export const getUsersService = async (): Promise<User[]> => {
-    const response = await fetch("http://localhost:4000/users", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
