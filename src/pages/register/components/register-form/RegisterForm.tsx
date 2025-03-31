@@ -26,7 +26,7 @@ export const RegisterForm = () => {
             <InputForm name="password" control={control} label="Password" type="password" error={errors.password} />
             <button type="submit" >Registrarse</button>
             {loading && <p>Loading...</p>}
-            {error?.message && <p className="error">{error.message}</p>}
+            {error && <p className="error">{error}</p>}
             {data && <p>Register successful!</p>}
             <p>¿Ya tienes una cuenta?</p>
             <a href="/login">Logeate</a>
