@@ -1,0 +1,17 @@
+.custom-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .custom-form-title {
+    margin-right: 60px; 
+  }
+  
+  .custom-form button {
+    width: 100%;
+    
+  }
